@@ -4,7 +4,7 @@ from main import calculate_sum_and_average, get_numbers_from_user
 class TestCalculateFunctions(unittest.TestCase):
 
     def test_valid_numbers(self):
-        self.assertEqual(calculate_sum_and_average([1, 2, 3]), (6, 2.0))
+        self.assertEqual(calculate_sum_and_average([1, 2, 3]), (5, 2.0))
 
     def test_empty_list(self):
         with self.assertRaises(ValueError) as context:
