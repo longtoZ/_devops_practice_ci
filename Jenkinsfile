@@ -58,7 +58,7 @@ pipeline {
                 sh '''
                     set -e
                     . .venv/bin/activate
-                    coverage run -m pytest -v -s
+                    coverage run --source=main -m pytest -v -s
                 '''
             }
         }
@@ -68,7 +68,7 @@ pipeline {
                 sh '''
                     set -e
                     . .venv/bin/activate
-                    coverage report -m
+                    coverage report -m --fail-under=100
                 '''
             }
         }
